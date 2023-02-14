@@ -17,6 +17,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.geometry.isUnspecified
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import kotlin.math.max
 import kotlin.math.roundToInt
@@ -144,7 +145,7 @@ fun App() {
         Canvas(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(260.dp)
+                .height(with(LocalDensity.current) { 500f.toDp() })
         ) {
             canvasSize = size
 

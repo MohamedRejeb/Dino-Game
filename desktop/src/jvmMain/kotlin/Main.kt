@@ -4,7 +4,10 @@ import com.mocoding.dinogame.common.App
 
 
 fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
+    Window(
+        title = "Compose Dino Game",
+        onCloseRequest = ::exitApplication
+    ) {
         App()
     }
 }
